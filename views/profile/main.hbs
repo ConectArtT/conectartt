@@ -1,0 +1,24 @@
+<h1>{{currentUserInfo.name}}'s Profile</h1>
+<div>
+    <img src="{{currentUserInfo.imgPath}}" alt="{{currentUserInfo.imgName}}" width="250px" height="250px">
+</div>
+<h5> {{{currentUserInfo.bio}}}</h5>
+<ul>
+    {{#each currentUserInfo.roles}}
+    <li>
+        <h4> {{this}} </h4>
+    </li>
+    {{/each}}
+</ul>
+
+<h3>Mensajes</h3>
+<ul>
+    {{#each messages}}
+    <li>
+        From:<br>
+        {{this.from}} (o algo asi)<br>
+        Message:<br>
+        {{this.message}}
+    </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div>
+        <img src="{{watchedUser.imgPath}}" alt="{{watchedUser.imgName}}" width="250px" height="250px">
+    </div>
+    <h1>{{watchedUser.name}}, {{watchedUser.age}}</h1>
+    <h3> {{watchedUser.bio}}</h3>
+    <ul>
+        {{#each watchedUser .roles}}
+
+        <li>
+            <h4> {{ this}} </h4>
+        </li>
+        {{/each}}
+    </ul>
+
+    <div class="container-fluid">
+        <h5>Rate his work!</h5>
+        {{> rate watchedUser}}
+    </div>
+
+    <div class="container-fluid">
+        <h5>Send a Message!</h5>
+        <form action="/message/{{watchedUser.username}}" method="POST">
+            <input type="text" name="message" placeholder="message">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</div>

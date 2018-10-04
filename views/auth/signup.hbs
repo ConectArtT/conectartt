@@ -1,0 +1,64 @@
+{{#if errorMessage}}
+<p class="error-message">
+    {{ errorMessage }}
+</p>
+{{/if}}
+
+<div class="container-fluid">
+    <form action="/signup" method="post" enctype="multipart/form-data">
+        <div>Name:
+            <input type="text" name="name" placeholder="Pepito Perez">
+        </div>
+        <div>Email:
+            <input type="email" name="email" placeholder="pepe@gmail.com">
+        </div>
+        <div>Username:
+            <input type="text" name="username" placeholder="PePe">
+        </div>
+        <div>Password:
+            <input type="password" name="password" placeholder="xxx123Pepe321xxx">
+        </div>
+        <div>Bio:
+            <textarea rows="4" cols="25" name="bio" placeholder="le Bio."> </textarea>
+        </div>
+        <div>Age:
+            <input type="number" name="age" placeholder="69">
+        </div>
+        <div> Upload a Pic!
+            <input type="file" name="photo">
+        </div>
+        <div>Social:
+            <input type="text" name="social" placeholder="instagram.com/PePe">
+        </div>
+        <div>Webpage:
+            <input type="text" name="webpage" placeholder="https://www.pepepepe.com">
+        </div>
+        <div>Gender:
+            <div> <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div>Roles:
+            <div> <input type="checkbox" name="roles" value="Producer">Producer</div>
+            <div> <input type="checkbox" name="roles" value="Club Owner">Club Owner</div>
+            <div> <input type="checkbox" name="roles" value="Musician">Musician</div>
+            <div> <input type="checkbox" name="roles" value="Performer">Performer</div>
+            <div> <input type="checkbox" name="roles" value="Dancer">Dancer</div>
+            <div> <input type="checkbox" name="roles" value="Manager">Manager</div>
+            <div> <input type="checkbox" name="roles" value="Singer">Singer</div>
+            <div> <input type="checkbox" name="roles" value="Designer">Designer</div>
+            <div> <input type="checkbox" name="roles" value="Writer">Writer</div>
+        </div>
+        <div>Language:
+            <div> <input type="checkbox" name="languages" value="Spanish">Spanish</div>
+            <div> <input type="checkbox" name="languages" value="English">English</div>
+            <div> <input type="checkbox" name="languages" value="German">German</div>
+            <div> <input type="checkbox" name="languages" value="French">French</div>
+        </div>
+        <div><button class="btn btn-submit">Sign Up!</button>
+        </div>
+    </form>
+</div>

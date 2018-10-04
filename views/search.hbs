@@ -1,0 +1,21 @@
+<h1>{{#each searchresults}}</h1>
+<a href="/profile/{{this.username}}">
+    <h2>{{this.name}}</h2>
+</a>
+<img src="{{this.imgPath}}" alt="{{this.imgName}}" width="250px " height="250px">
+<h4>{{this.bio}}</h4>
+<ul>
+    <h4>Disciplines</h4>
+    {{#each this.roles}}
+    <li>
+        <p> {{this}} </p>
+    </li>
+    {{/each}}
+    <h4>Languages</h4>
+    {{#each this.languages}}
+    <li>
+        <p> {{this}} </p>
+    </li>
+    {{/each}}
+</ul>
+{{/each}}

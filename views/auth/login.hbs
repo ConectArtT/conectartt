@@ -1,0 +1,12 @@
+{{#if errorMessage}}
+<p class="error-message">
+    {{ errorMessage }}
+</p>
+{{/if}}
+
+<form action="/login" method="post">
+    Email or Username: <input type="text" name="credentials" placeholder="pepe@gmail.com o PePe"><br>
+    Password: <input type="password" name="password" placeholder="xxx123Pepe321xxx">
+    <br>
+    <button class="btn btn-submit">Login</button>
+</form>
